@@ -330,9 +330,11 @@ strong { color: inherit; }
   gap: clamp(1.5rem, 5vw, 3rem);
   align-items: start;
 }
-.rocket__figure { margin: 0; position: sticky; top: 1.5rem; }
+.rocket__figure { margin: 0 auto; position: sticky; top: 1.5rem; max-width: 300px; }
 .rocket__figure img {
+  display: block;
   width: 100%;
+  height: auto;
   border-radius: 18px;
   border: 4px solid var(--ink);
   box-shadow: 0 12px 0 rgba(0,0,0,.35), 0 20px 40px rgba(0,0,0,.5);
