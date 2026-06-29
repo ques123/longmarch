@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operation Long March — Hainan 2026</title>
+  <meta name="description" content="A pitch to my favourite humans: let's go watch the Long March 10B rocket light up the sky in Hainan, China — July 10, 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== HEADER / HERO ===== -->
+  <header class="hero">
+    <div class="hero__img" style="background-image:url('img/hero.png')"></div>
+    <div class="hero__scrim"></div>
+
+    <div class="hero__content">
+      <p class="hero__kicker">🚀 一起去看火箭 · A WILDLY GOOD IDEA</p>
+      <h1 class="hero__title">
+        <span class="hero__title-line">OPERATION</span>
+        <span class="hero__title-line hero__title-line--big">LONG MARCH</span>
+      </h1>
+      <p class="hero__subtitle">
+        Let's fly to <strong>Hainan, China</strong> and watch the
+        <strong>Long March 10B</strong> rocket tear a hole in the sky.
+      </p>
+
+      <div class="hero__badges">
+        <span class="badge"><span class="badge__label">WHEN</span> 9–11 Jul 2026 (Thu–Sat)</span>
+        <span class="badge"><span class="badge__label">WHERE</span> Wenchang, Hainan 🌴</span>
+        <span class="badge"><span class="badge__label">WHO</span> Us. Obviously.</span>
+      </div>
+
+      <div class="hero__ctas">
+        <button class="cta cta--gold imin" type="button">Nuff said, I'm in! 🚀</button>
+        <a class="cta" href="#intro">Tell me more →</a>
+      </div>
+    </div>
+
+    <div class="hero__lanterns" aria-hidden="true">🏮🏮🏮</div>
+  </header>
+
+  <!-- ===== INTRO / SUMMARY ===== -->
+  <section class="intro" id="intro">
+    <div class="intro__grid">
+      <div class="intro__text">
+        <h2 class="section-title">So here's the pitch <span class="wobble">🧧</span></h2>
+        <p class="lead">
+          On <strong>July 10th, 2026</strong>, China is launching the
+          <strong>Long March 10B</strong> — a brand-new heavy-lift rocket — from the
+          <strong>Wenchang Space Launch Site</strong> on the tropical island of
+          <strong>Hainan</strong>.
+        </p>
+        <p>
+          Palm trees, turquoise water, street food, and a
+          skyscraper-sized machine riding a pillar of fire into orbit a few kilometres away.
+        </p>
+
+        <ul class="intro__hits">
+          <li>🚀 A real, live, ground-shaking rocket launch — 150+ dB of sound, rolling in ~15 seconds later</li>
+          <li>🌴 Tropical island, beaches & delicious Chinese food</li>
+          <li>🧧 A proper adventure for the rocket boys</li>
+        </ul>
+      </div>
+
+      <figure class="intro__figure">
+        <img src="img/crew.png" alt="Cartoon crew of friends as taikonauts riding a Long March rocket" />
+        <figcaption>Artist's impression of us. Roughly accurate.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== WHAT'S LAUNCHING ===== -->
+  <section class="sec sec--dark" id="rocket">
+    <div class="sec__inner rocket__grid">
+      <figure class="rocket__figure">
+        <img src="img/rocket.png" alt="Cartoon illustration of the Long March 10B rocket on its launch pad in Wenchang, Hainan" />
+      </figure>
+
+      <div class="rocket__body">
+        <h2 class="section-title section-title--gold">What's launching? 🚀</h2>
+        <p class="lead lead--light">
+          Meet the <strong>Long March 10B</strong> — a brand-new, 70-metre Chinese
+          heavy-lifter, and <strong>this is its very first flight ever</strong>.
+        </p>
+        <p class="muted">
+          We're not turning up to some routine satellite launch. July 2026 is the
+          <strong>maiden flight</strong> of an all-new rocket from China's
+          next-generation fleet. Nobody has watched one of these leave the ground before. We'd be there for #1.
+        </p>
+
+        <div class="specs">
+          <div class="spec">
+            <span class="spec__num">70.2 m</span>
+            <span class="spec__label">tall — about as tall as a Falcon 9</span>
+          </div>
+          <div class="spec">
+            <span class="spec__num">~740 t</span>
+            <span class="spec__label">fully fuelled (≈ 500 cars)</span>
+          </div>
+          <div class="spec">
+            <span class="spec__num">7×</span>
+            <span class="spec__label">YF-100K engines, kerosene + oxygen</span>
+          </div>
+          <div class="spec">
+            <span class="spec__num">8,750 kN</span>
+            <span class="spec__label">liftoff thrust — ~8 jumbo jets</span>
+          </div>
+          <div class="spec">
+            <span class="spec__num">16 t</span>
+            <span class="spec__label">payload to low Earth orbit</span>
+          </div>
+          <div class="spec">
+            <span class="spec__num">♻️ sea</span>
+            <span class="spec__label">partially reusable — booster lands at sea</span>
+          </div>
+        </div>
+
+        <h3 class="mini-title">Why it's a big deal</h3>
+        <ul class="bullets">
+          <li>🥇 <strong>Maiden flight</strong> — the first time this rocket has ever flown.</li>
+          <li>♻️ <strong>Partially reusable</strong> first stage, recovered out at sea — China's answer to SpaceX.</li>
+          <li>🛰️ Built to haul up China's <strong>satellite-internet megaconstellation</strong> (their Starlink rival).</li>
+          <li>🌙 Shares its core with the rocket family that will fly <strong>Chinese astronauts to the Moon</strong>.</li>
+        </ul>
+
+        <div class="noise">
+          <span class="noise__icon">🔊</span>
+          <p>
+            <strong>And the noise.</strong> At the pad a launch like this tops
+            <strong>150+ decibels</strong> — past the threshold of pain. From our hotel
+            ~5 km up the coast it hits as a delayed, crackling roar you feel in your
+            <em>chest</em>. Sound is slow, so the bang reaches you about
+            <strong>15 seconds after</strong> the rocket leaves the pad — you'll see it go,
+            then feel it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHERE WILL WE STAY ===== -->
+  <section class="sec sec--paper" id="stay">
+    <div class="sec__inner">
+      <h2 class="section-title">Where will we stay? 🏨</h2>
+      <p class="lead">
+        The <strong>Hilton Wenchang</strong> — a 5-star beach resort
+        with the <strong>launch pad ~5 km down the coast</strong> — close enough to watch the whole thing from the beach.
+      </p>
+
+      <div class="stay__grid">
+        <figure class="stay__video">
+          <video controls preload="none" playsinline poster="img/hotel-poster.png">
+            <source src="https://pix5.agoda.net/video/1030554.mp4" type="video/mp4" />
+            Your browser can't play this video.
+          </video>
+          <figcaption>A look around the Hilton Wenchang.</figcaption>
+        </figure>
+
+        <div class="stay__facts">
+          <div class="factcard">
+            <span class="factcard__num">⭐⭐⭐⭐⭐</span>
+            <span class="factcard__label">Proper 5-star resort</span>
+          </div>
+          <div class="factcard">
+            <span class="factcard__num">~5 km</span>
+            <span class="factcard__label">From the Wenchang launch pad — in clear view of the hotel</span>
+          </div>
+          <div class="factcard">
+            <span class="factcard__num">~฿3,000</span>
+            <span class="factcard__label">Per night, launch-pad view (as cheap as ฿2,260 for a garden view)</span>
+          </div>
+          <p class="stay__note">
+            Translation: we watch a rocket light up the sky <em>from our balcony or the
+            hotel's beach</em>, cocktail in hand — a front-row seat to history.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHERE WILL WE WATCH ===== -->
+  <section class="sec sec--dark" id="watch">
+    <div class="sec__inner">
+      <h2 class="section-title section-title--gold">Where will we watch the launch from? 👀</h2>
+      <p class="lead lead--light">
+        Two options, both unreal: <strong>our own hotel balcony</strong>, or down on the
+        <strong>beach with thousands of others</strong>.
+      </p>
+
+      <div class="watch__grid">
+        <figure class="watch__video">
+          <div class="watch__frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/FfGmI2DQWSA?start=55"
+              title="Long March launch viewed from the Hainan coast"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <figcaption>What it looks like from the coast. Sound up.</figcaption>
+        </figure>
+
+        <div class="watch__opts">
+          <div class="watch__card">
+            <span class="watch__icon">🍹</span>
+            <h4>From the balcony</h4>
+            <p>Pad-view room, feet up, drink in hand. The rocket clears the tower and we
+              don't even have to stand.</p>
+          </div>
+          <div class="watch__card">
+            <span class="watch__icon">🏖️</span>
+            <h4>On the beach</h4>
+            <p>Or wander down and join <strong>thousands</strong> of locals and space
+              nerds on the sand — the crowd roar when it lifts is half the experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW WILL WE GET THERE ===== -->
+  <section class="sec sec--dark" id="travel">
+    <div class="sec__inner">
+      <h2 class="section-title section-title--gold">How will we get there? ✈️</h2>
+      <p class="lead lead--light">
+        One <strong>direct flight</strong>. <strong>Hainan Airlines</strong>,
+        Bangkok → Haikou — just <strong>2h 20m in the air</strong>, no connections, no faff.
+      </p>
+
+      <div class="flight">
+        <div class="flight__leg">
+          <span class="flight__day">Thursday</span>
+          <div class="flight__route">
+            <div class="flight__end">
+              <span class="flight__code">BKK</span>
+              <span class="flight__time">11:05</span>
+              <span class="flight__city">Bangkok</span>
+            </div>
+            <span class="flight__line">✈ 2h 20m direct</span>
+            <div class="flight__end">
+              <span class="flight__code">HAK</span>
+              <span class="flight__time">~14:25</span>
+              <span class="flight__city">Haikou</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flight__leg flight__leg--return">
+          <span class="flight__day">Saturday</span>
+          <div class="flight__route">
+            <div class="flight__end">
+              <span class="flight__code">HAK</span>
+              <span class="flight__time">17:00</span>
+              <span class="flight__city">Haikou</span>
+            </div>
+            <span class="flight__line">✈ 2h 20m direct</span>
+            <div class="flight__end">
+              <span class="flight__code">BKK</span>
+              <span class="flight__time">~18:20</span>
+              <span class="flight__city">Bangkok</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fares">
+        <div class="fare">
+          <span class="fare__price">฿10,000</span>
+          <span class="fare__label">return · economy</span>
+        </div>
+        <div class="fare fare--biz">
+          <span class="fare__price">฿22,000</span>
+          <span class="fare__label">return · business</span>
+        </div>
+      </div>
+      <p class="muted center">Depart 11:05 Thursday, back by Saturday evening — only 2h 20m in the air each way. A long weekend, basically.</p>
+    </div>
+  </section>
+
+  <!-- ===== DO I NEED A VISA ===== -->
+  <section class="sec sec--paper" id="visa">
+    <div class="sec__inner sec__inner--narrow">
+      <h2 class="section-title">Do I need a visa? 🛂</h2>
+      <p class="lead">Almost certainly not. <strong>Hainan is China on easy mode.</strong></p>
+      <p>
+        Hainan is a tropical holiday island with its <strong>own relaxed visa policy</strong> —
+        it lets in tourists from nearly everywhere <strong>visa-exempt</strong>, no embassy
+        queue, no paperwork.
+      </p>
+      <p>
+        On top of that, mainland China currently runs a <strong>unilateral visa-free
+        scheme</strong> giving most Europeans <strong>30 days</strong> of access with nothing
+        to apply for. Between the two, getting in is about as frictionless as China gets.
+      </p>
+      <p class="muted">
+        We'll double-check the exact rules for each passport closer to the time — but for this
+        crew, "just turn up" is the likely answer.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== WHAT'S THE RISKS ===== -->
+  <section class="sec sec--dark" id="risks">
+    <div class="sec__inner sec__inner--narrow">
+      <h2 class="section-title section-title--gold">What's the risk? ⚠️</h2>
+      <p class="lead lead--light">
+        One honest catch: <strong>rockets slip.</strong> The launch could get pushed back.
+      </p>
+      <p class="muted">
+        The planned launch <strong>window is 10–13 July</strong>. Mechanical gremlins and
+        weather are completely out of our hands — a scrub and reschedule is always possible,
+        especially on a maiden flight. We can't control the rocket. But we <em>can</em> make
+        sure a slip costs us almost nothing.
+      </p>
+
+      <h3 class="mini-title">How we de-risk it</h3>
+      <div class="risk__grid">
+        <div class="riskcard">
+          <span class="riskcard__icon">✈️</span>
+          <h4>Flights are changeable</h4>
+          <p>Refundable / re-bookable fares — shift the dates for just a <strong>฿2,000–4,000</strong> fee if the window moves.</p>
+        </div>
+        <div class="riskcard">
+          <span class="riskcard__icon">🏨</span>
+          <h4>Hotel is free-cancel</h4>
+          <p>The Hilton booking is <strong>free cancellation</strong> right up to the day before we arrive. Zero risk on the room.</p>
+        </div>
+      </div>
+      <p class="muted">
+        Worst case, the launch slips and we're on a 5-star beach in tropical Hainan anyway.
+        Best case, we time it perfectly and watch history. The downside is a good holiday.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== THE MAP ===== -->
+  <section class="sec sec--paper" id="map">
+    <div class="sec__inner">
+      <h2 class="section-title">The lay of the land 🗺️</h2>
+      <p class="lead">
+        Fly into <strong>Haikou</strong>, drive down the coast to
+        <strong>Wenchang</strong>, and the launch pad is right there —
+        <span class="x-spot">✗</span> marks the spot.
+      </p>
+
+      <div class="maps2">
+        <figure class="mapfig">
+          <div id="map-flight" class="leafmap"></div>
+          <figcaption><span class="legnum">1</span> The flight · Bangkok → Haikou, direct (2h 20m)</figcaption>
+        </figure>
+        <figure class="mapfig">
+          <div id="map-drive" class="leafmap"></div>
+          <figcaption><span class="legnum">2</span> The drive · Haikou airport → Hilton Wenchang (~91 km, ~1h08)</figcaption>
+        </figure>
+        <figure class="mapfig mapfig--wide">
+          <div id="map-local" class="leafmap"></div>
+          <figcaption><span class="legnum">3</span> Wenchang close-up · 🏨 the Hilton on Qishui Bay, the <span class="legx">✗</span> LM-10B launch pad (~5 km), and the 🪂 booster's sea landing pad (~9 km out)</figcaption>
+        </figure>
+      </div>
+      <p class="muted">Real maps — drag and zoom them. Use the + / − buttons to zoom right in.</p>
+    </div>
+  </section>
+
+  <!-- ===== RSVP / IM IN ===== -->
+  <section class="sec sec--dark cta-final" id="rsvp">
+    <div class="sec__inner sec__inner--narrow center">
+      <h2 class="section-title section-title--gold">So… are you in? 🚀</h2>
+      <p class="lead lead--light">Direct flight, beach hotel, a brand-new rocket. Say the word.</p>
+      <button class="bigcta imin" type="button">I'M IN! ROCKET BOIIIII 🚀</button>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p>Operation Long March · a totally serious proposal · 中国 · 海南 · 2026</p>
+  </footer>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
