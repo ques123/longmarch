@@ -340,6 +340,25 @@ strong { color: inherit; }
   box-shadow: 0 12px 0 rgba(0,0,0,.35), 0 20px 40px rgba(0,0,0,.5);
 }
 
+/* Full-width rocket size-comparison figure */
+.scalefig { margin: clamp(1.8rem, 4vw, 2.8rem) auto 0; }
+.scalefig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 4px solid var(--ink);
+  box-shadow: 0 12px 0 rgba(0,0,0,.3), 0 18px 36px rgba(0,0,0,.45);
+}
+.scalefig figcaption {
+  margin-top: .95rem;
+  text-align: center;
+  color: rgba(253,246,227,.82);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.scalefig figcaption strong { color: var(--gold); }
+
 .specs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
