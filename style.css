@@ -723,7 +723,7 @@ strong { color: inherit; }
   .intro__grid { grid-template-columns: 1fr; }
   .intro__figure { order: -1; }
   .rocket__grid { grid-template-columns: 1fr; }
-  .rocket__figure { position: static; max-width: 360px; margin: 0 auto; }
+  .rocket__figure { position: static; max-width: 220px; margin: 0 auto; }
   .specs { grid-template-columns: 1fr 1fr; }
   .stay__grid { grid-template-columns: 1fr; }
   .watch__grid { grid-template-columns: 1fr; }
