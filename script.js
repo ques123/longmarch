@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   initMaps();
+  initLaunchSequence();
 
   document.querySelectorAll(".imin").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -108,6 +109,48 @@ function initMaps() {
     m3.fitBounds(L.latLngBounds([HILTON, SITE, LANDING]), { paddingTopLeft: [60, 50], paddingBottomRight: [150, 50] });
     refreshWhenVisible(m3, l);
   }
+}
+
+// ---- Play the song once on load, then launch the giant rocket 5s in ----
+function initLaunchSequence() {
+  const audio = document.getElementById("bgm");
+  const rocket = document.getElementById("megarocket");
+  if (!audio || !rocket) return;
+
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let armed = false;
+
+  // Fire the giant rocket once, 5s after playback actually begins.
+  const armLaunch = () => {
+    if (armed) return;
+    armed = true;
+    if (reduce) return; // honour reduced-motion: skip the animation
+    setTimeout(() => {
+      rocket.classList.add("megarocket--launch");
+      // Clean up once it's off-screen so it can't linger or re-trigger.
+      rocket.addEventListener("animationend", () => rocket.remove(), { once: true });
+    }, 5000);
+  };
+
+  // Start the 5s clock the moment the song really starts playing.
+  audio.addEventListener("playing", armLaunch, { once: true });
+
+  // Try to autoplay; many browsers block sound until the user interacts.
+  const tryPlay = () => audio.play().catch(() => {});
+  tryPlay();
+
+  // Fallback: if autoplay was blocked, start on the first user gesture.
+  const onGesture = () => {
+    tryPlay();
+    if (!audio.paused) {
+      ["pointerdown", "keydown", "touchstart"].forEach((ev) =>
+        removeEventListener(ev, onGesture)
+      );
+    }
+  };
+  ["pointerdown", "keydown", "touchstart"].forEach((ev) =>
+    addEventListener(ev, onGesture, { passive: true })
+  );
 }
 
 // ---- "IM IN" full-screen rocket blast ----

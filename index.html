@@ -164,6 +164,43 @@
            alt="The world's rockets drawn to scale, with the Long March boxed in red beside SpaceX's Falcon, and Starship towering on the far right." />
       <figcaption>Size check 📏 — our <strong>Long March</strong> lined up against SpaceX's <strong>Falcon</strong> (boxed in red), with <strong>Starship</strong> flexing on the far right. Not a toy.</figcaption>
     </figure>
+
+    <div class="sec__inner bangfai">
+      <h3 class="mini-title bangfai__title">Meanwhile, back in Thailand… 🇹🇭🚀</h3>
+      <p class="lead lead--light bangfai__lead">
+        For scale of a different kind: this is the <strong>Bun Bang Fai</strong> rocket
+        festival, where Thai villagers fire home-made bamboo-and-PVC rockets into the sky.
+        They're a glorious, smoky spectacle — and the <strong>Long March 10B puts out
+        up to ~9,000× the thrust</strong> of the biggest one here.
+      </p>
+      <div class="bangfai__grid">
+        <figure class="bangfai__video">
+          <div class="bangfai__frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/NCNplEHC_2Q"
+              title="Bang Fai (บั้งไฟ) rocket festival, Thailand"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <figcaption>Thailand's Bang Fai rocket festival — homemade, hand-launched, and a riot.</figcaption>
+        </figure>
+        <div class="bangfai__compare">
+          <div class="spec">
+            <span class="spec__num">~8,750 kN</span>
+            <span class="spec__label">Long March 10B liftoff thrust</span>
+          </div>
+          <div class="spec">
+            <span class="spec__num">~1 kN</span>
+            <span class="spec__label">a big Bang Fai festival rocket</span>
+          </div>
+          <div class="spec">
+            <span class="spec__num">up to 9,000×</span>
+            <span class="spec__label">more thrust than Thailand's largest 🇹🇭</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== WHERE WILL WE STAY ===== -->
@@ -401,6 +438,14 @@
   <footer class="foot">
     <p>Operation Long March · a totally serious proposal · 中国 · 海南 · 2026</p>
   </footer>
+
+  <!-- Plays once on load; 5s in, the giant rocket below launches -->
+  <audio id="bgm" src="background.MP3" preload="auto"></audio>
+
+  <!-- Giant full-screen rocket: shakes, then launches bottom → top off-screen -->
+  <div id="megarocket" class="megarocket" aria-hidden="true">
+    <span class="megarocket__emoji">🚀</span>
+  </div>
 
   <script src="vendor/leaflet/leaflet.js"></script>
   <script src="script.js"></script>

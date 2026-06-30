@@ -359,6 +359,46 @@ strong { color: inherit; }
 }
 .scalefig figcaption strong { color: var(--gold); }
 
+/* ---- Bang Fai festival comparison ---- */
+.bangfai { margin-top: clamp(2rem, 5vw, 3.2rem); }
+.bangfai__title { color: var(--gold); }
+.bangfai__lead { margin-top: .4rem; }
+.bangfai__lead strong { color: var(--gold); }
+.bangfai__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) 1fr;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: center;
+  margin-top: 1.4rem;
+}
+.bangfai__video { margin: 0; }
+.bangfai__frame {
+  position: relative;
+  /* Vertical YouTube Short (9:16). */
+  padding-top: 177.78%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 4px solid var(--gold);
+  box-shadow: 0 10px 0 rgba(0,0,0,.35);
+  background: #000;
+}
+.bangfai__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.bangfai__video figcaption {
+  margin-top: .5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--gold);
+  font-size: .9rem;
+  text-align: center;
+}
+.bangfai__compare { display: grid; gap: .8rem; }
+
 .specs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -727,6 +767,47 @@ strong { color: inherit; }
   100% { transform: translate(var(--dx), -120vh) rotate(calc(-45deg + var(--rot))) scale(1.1); opacity: 0; }
 }
 
+/* ============ GIANT ROCKET LAUNCH (5s into the song) ============ */
+.megarocket {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  z-index: 10000;
+  pointer-events: none;
+  /* The outer element flies bottom → top off-screen. */
+  transform: translate(-50%, 120vh);
+  opacity: 0;
+}
+.megarocket--launch {
+  animation: megaLaunch 2.4s cubic-bezier(.45, 0, .85, .35) forwards;
+}
+.megarocket__emoji {
+  display: block;
+  /* Giant — fills most of the screen height. */
+  font-size: min(70vh, 80vw);
+  line-height: 1;
+  /* Tilt so the rocket points "up". */
+  transform: rotate(-45deg);
+  filter: drop-shadow(0 0 40px rgba(245, 197, 66, .85));
+}
+/* Independent fast shake/vibrate on the inner element while it climbs. */
+.megarocket--launch .megarocket__emoji {
+  animation: megaShake .06s linear infinite;
+}
+@keyframes megaLaunch {
+  0%   { transform: translate(-50%, 120vh); opacity: 0; }
+  10%  { transform: translate(-50%, 75vh);  opacity: 1; }
+  18%  { transform: translate(-50%, 55vh);  opacity: 1; }
+  100% { transform: translate(-50%, -160vh); opacity: 1; }
+}
+@keyframes megaShake {
+  0%   { transform: rotate(-45deg) translate(-4px, 2px); }
+  25%  { transform: rotate(-44deg) translate(5px, -3px); }
+  50%  { transform: rotate(-46deg) translate(-3px, 4px); }
+  75%  { transform: rotate(-44.5deg) translate(4px, -2px); }
+  100% { transform: rotate(-45.5deg) translate(-5px, 3px); }
+}
+
 /* ============ FOOTER ============ */
 .foot {
   background: var(--ink);
@@ -748,6 +829,8 @@ strong { color: inherit; }
   .specs { grid-template-columns: 1fr 1fr; }
   .stay__grid { grid-template-columns: 1fr; }
   .watch__grid { grid-template-columns: 1fr; }
+  .bangfai__grid { grid-template-columns: 1fr; }
+  .bangfai__video { max-width: 340px; margin: 0 auto; }
   .flight__code { font-size: 1.4rem; }
   .flight__route { gap: .5rem; }
   .risk__grid { grid-template-columns: 1fr; }
