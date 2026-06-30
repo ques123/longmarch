@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".imin").forEach((btn) => {
     btn.addEventListener("click", () => {
       launchRockets();
-      btn.textContent = "Nuff said, I'm in! 🚀";
       btn.classList.add("imin--done");
     });
   });
